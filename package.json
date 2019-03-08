@@ -1,0 +1,27 @@
+{
+  "name": "cloud-formation-pipeline-demo",
+  "version": "1.0.0",
+  "description": "Cloud Formation Pipeline Demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha './test/**/*.spec.js'",
+    "lint": "eslint --ext .js src test",
+    "lint:fix": "eslint --ext .js src test --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^11.9.4",
+    "eslint": "^5.14.1",
+    "expect": "^24.1.0",
+    "faker": "^4.1.0",
+    "mocha": "^6.0.0",
+    "nodemon": "^1.18.10"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.417.0",
+    "dotenv": "^6.2.0",
+    "sinon": "^7.2.7"
+  }
+}

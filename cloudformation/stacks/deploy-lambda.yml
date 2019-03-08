@@ -1,0 +1,24 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Lambda function
+Parameters:
+  ProjectName:
+    Type: String
+  Env:
+    Type: String
+  RoleArn:
+    Type: String
+Resources:
+  HelloWorldFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub ${ProjectName}-${Env}-hello-world
+      CodeUri: ../../src
+      Handler: index.sayHello
+      MemorySize: 128
+      Role: !Ref RoleArn
+      Runtime: nodejs8.10
+      Timeout: 30
+      Environment:
+        Variables:
+          ENV: !Ref Env
